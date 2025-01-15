@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SABAS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #fad0c4);
+            background-size: 400% 400%;
+            animation: gradientMove 10s ease infinite;
+            z-index: -1;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .ESP32-Cam {
+            border: 2px solid #fff;
+            padding: 10px;
+            border-radius: 32px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+
+    <div class="container">
+        <h1>Welcome to S.A.B.A.S <br/> (Smart Automated Batch for Attendance System) </h1>
+        <b><p>
+            This project includes ESP32 Cam Module, ESP32 Dev Module and an RFID Reader Module.
+            <br>
+            <b>Uses : </b>
+            <br>
+            <p class="ESP32-Cam">1.) ESP32 Cam Module - The Cam Module is being used for the 3D Body Modelling and student recognition. It is used for the double verification of the student and a part of the security system. </p>
+            <br>
+            <p class="ESP32-Cam">2.) ESP32 Dev Module - Dev Module is used for controlling incoming and outgoing signals and also it is the cpu of our system which controls all the components in our system.</p>
+            <br>
+            <p class="ESP32-Cam">3.) RFID Reader Module - RFID Reader is used for the student identification and attendance marking. It is used for the single verification of the student. It tells the Dev Module about the student UID using which the dev Module can understand which is this student. </p>
+        </p> </b>
+    </div>
+</body>
+</html>
